@@ -18,10 +18,26 @@ Proyecto final de la materia **Programación 1** — Tecnicatura en Ciencia de D
 git clone <URL_DEL_REPOSITORIO>
 cd f1_stats_explorer
 
-# 2. Crear y activar un entorno virtual
+# 2. Crear el entorno virtual
 python3 -m venv venv
-source venv/bin/activate        # En Windows: venv\Scripts\activate
+```
 
+> En Linux basado en Debian/Ubuntu, si da un error de que falta el módulo `venv`, instalarlo primero con: `sudo apt install python3-venv`
+
+Activar el entorno virtual según tu sistema operativo:
+
+| Sistema | Comando |
+|---|---|
+| **Linux / macOS** | `source venv/bin/activate` |
+| **Windows (PowerShell)** | `.\venv\Scripts\Activate.ps1` |
+| **Windows (CMD)** | `venv\Scripts\activate.bat` |
+| **Windows (Git Bash)** | `source venv/Scripts/activate` |
+
+> En Windows PowerShell, si da un error de "ejecución de scripts deshabilitada", correr una sola vez: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`
+
+Con el entorno ya activado (el prompt muestra `(venv)` al principio):
+
+```bash
 # 3. Instalar las dependencias
 pip install -r requirements.txt
 
@@ -72,4 +88,4 @@ f1_stats_explorer/
 
 ## Autor
 
-Gonzalo — Tecnicatura en Ciencia de Datos e Integración con IA, ISTEA (2026).
+Gonzalo Valentin Gomez — Tecnicatura en Ciencia de Datos e Integración con IA, ISTEA (2026).
